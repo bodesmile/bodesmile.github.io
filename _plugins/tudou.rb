@@ -24,5 +24,5 @@ class TuDou < Liquid::Tag
     "<iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://www.tudou.com/programs/view/html5embed.action?code=#{@id}\" frameborder=0 allowfullscreen></iframe>"
   end
 
-  #Liquid::Template.register_tag "tudou", self
+  Liquid::Template.register_tag "tudou", self
 end
