@@ -24,5 +24,5 @@ class YouKu < Liquid::Tag
     "<iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://player.youku.com/embed/#{@id}\" frameborder=0 allowfullscreen></iframe>"
   end
 
-  Liquid::Template.register_tag "youku", self
+  #Liquid::Template.register_tag "youku", self
 end
