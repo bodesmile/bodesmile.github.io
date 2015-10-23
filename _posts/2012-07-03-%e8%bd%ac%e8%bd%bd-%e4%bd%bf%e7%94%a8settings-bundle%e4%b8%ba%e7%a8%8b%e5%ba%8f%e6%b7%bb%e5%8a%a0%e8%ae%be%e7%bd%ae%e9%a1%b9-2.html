@@ -1,0 +1,41 @@
+---
+layout: post
+title: '[转载] 使用Settings Bundle为程序添加设置项'
+date: 2012-07-03 02:55:00.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Coding 程序猿
+- 未分类
+tags: []
+meta: {}
+author: Bode
+---
+<br />
+<blockquote><p>Settings Bundle是在自己的程序中建立的一组文件，利用它可以告诉设备中的Settings程序我们写的程序有哪些设置项。</p></blockquote>
+<div>&#13; &#13; <!--BLOG_SUMMARY_END--></div>
+<div class="paragraph">Settings Bundle是在自己的程序中建立的一组文件，利用它可以告诉设备中的Settings程序我们写的程序有哪些设置项。用户在Settings程序中设置好相关相关选项后回到我们自己的程序，自己的程序中的对应项也会发生相应的变化。<br /><span><br /><span>在iOS程序中，用户默认项，即上面所说的设置项，是用NSUserDefaults类实现的。在NSUserDefaults类中使用关键字来读取和存储设置项的具体数据，就像NSDictionary类一样，不同的是，NSUserDefaults类的数据是存储在文件系统中的，而不是作为一个对象实例放在内存中。<br /><span><br /><span>在这篇文章中，我们将创建一个程序，为它添加和配置Settings Bundle，之后可以在Settings程序中显示和配置相关选项。在Settings Bundle中使用plist文件来定义程序中允许的设置项，Settings程序会自动建立接口。Settings Bundle中的plist文件必须遵循特定的格式，不过Xcode会帮助我们遵循这种格式。<br /><span><br /><span>1、首先下载初始代码。http://www.oschina.net/code/snippet_164134_10458<br /><span><br /><span>由于我们的重点是Settings Bundle的使用，那么建立工程、实现页面跳转等等就不详细说明了。<br /><span><br /><span>2、解压Settings Bundle Test.zip，使用Xcode 4.3打开此工程，先打开FirstViewController.xib，使用IB向其中添加控件，如下图：<br /><span><br /><span></p>
+<p>然后为这些标签向FirstViewController.h中建立Outlet映射：<br /><span><br /><span></p>
+<p>3、打开MoreViewController.xib，向其中添加控件，如下：<br /><span><br /><span></p>
+<p>然后，向MoreViewController.h中，为右边的两个Label以及UISlider与UISWitch控件创建Outlet映射，为UISlider与UISWitch控件添加Action映射：<br /><span><br /><span></p>
+<p>然后在Attribute Insepector中设置UISlider控件最小值、最大值和默认值分别是0、10和5：<br /><span><br /><span></p>
+<p>将准备好的两张图片添加到工程中，在Attribute Insepector中设置UISlider控件的Min Image与Max Image：<br /><span><br /><span></p>
+<p>4、接下来，为程序建立Settings Bundle。依次选择File — New — File…，找到Settings Bundle：<br /><span><br /><span></p>
+<p>单击Next，设置好名称和分组：<br /><span><br /><span></p>
+<p>然后单击Create，则创建了Settings.bundle。<br /><span><br /><span>5、展开Settings.bundle，其中包含一个Root.plist。Settings程序中的显示项就是从Root.plist中获取的。<br /><span><br /><span>单击Root.plist以打开它，在空白处单击，选中Show Raw Keys/Values：<br /><span><br /><span></p>
+<p>接下来，我们展开PreferenceSpecifiers那一项，删除除了Group之外的其他项。<br /><span><br /><span>PreferenceSpecifiers这个对应于刚打开Settings程序时第一页中该应用程序的一个标签，如果此时运行程序，然后在模拟器返回桌面，再打开Settings程序，则其中会出现Settings Bundle Test这一项：<br /><span><br /><span></p>
+<p>上图中的Settings Bundle Test这一项就可以理解为是从PreferenceSpecifiers获取的。<br /><span><br /><span>6、展开PreferenceSpecifiers这一项，先向其中添加三行，每一行的设置如下：<br /><span><span /></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div>
+<div class="wsite-image wsite-image-border-thin ">&#13; <a>&#13; <img src="{{ site.baseurl }}/assets/1550681_orig.jpg" alt="图片" /></a>&#13;
+<div>&#13; </div>
+</div>
+<div class="paragraph">此时运行程序，在Settings程序中单击上图中的Settings Bundle Test那一项，出现的页面如下图：<br /><span><br /><span></p>
+<p>在Root.plist文件中，Item 0那一项的类型是PSGroupSpecifier，它表示一个分组，则它下面的每Item 1到Item 3都是在这一组，直到下一个PSGroupSpecifier出现。<br /><span><br /><span>Item 1与Item 2都是PSTextFieldSpecifier类型的，它们都是文本框，可以通过为其添加子项限制这些文本框的输入。<br /><span><br /><span>Item 3是一个多选框，可供选择的值是由Titles与Values决定的，Titles与Values这两项内容是一样的，但是缺一不可。<br /><span><br /><span>7、之后，再向其中添加Item 4到Item 7，如下图：<br /><span><br /><span /></span></span></span></span></span></span></span></span></span></div>
+<div>
+<div class="wsite-image wsite-image-border-thin ">&#13; <a>&#13; <img src="{{ site.baseurl }}/assets/8735400_orig.jpg" alt="图片" /></a>&#13;
+<div>&#13; </div>
+</div>
+<div class="paragraph">不高兴复制了，全文在此： <a href="http://www.cocoachina.com/newbie/tutorial/2012/0605/4327.html" target="_blank">http://www.cocoachina.com/newbie/tutorial/2012/0605/4327.html</a></div>
+</p></div>
+</div>
