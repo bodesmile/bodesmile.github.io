@@ -72,13 +72,38 @@
                             {% endif %}
                         </div>
                         {% endif %}
+
+                        <div class="ds-share flat" data-thread-key={{ page.id }} data-title={{ page.title }} data-images="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg }}" data-content="{{ content }}" data-url="site.baseurl/{{ page.url }}">
+                            <div class="ds-share-aside-right">
+                              <div class="ds-share-aside-inner">
+                              </div>
+                              <div class="ds-share-aside-toggle" style="background: #fba827;">分享到</div>
+                            </div>
+                        </div>
+
+                        <!-- 多说评论框 start -->
+                            <div class="ds-thread" data-thread-key={{ page.id }} data-title={{ page.title }} data-url="site.baseurl/{{ page.url }}"></div>
+                        <!-- 多说评论框 end -->
+                        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                        <script type="text/javascript">
+                        var duoshuoQuery = {short_name:"bodesmile"};
+                            (function() {
+                                var ds = document.createElement('script');
+                                ds.type = 'text/javascript';ds.async = true;
+                                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                                ds.charset = 'UTF-8';
+                                (document.getElementsByTagName('head')[0] 
+                                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+                            })();
+                            </script>
+                        <!-- 多说公共JS代码 end -->
                     </article>
                     <div class="post_nav">
                         {% if page.previous.url %}
-                        <a class="prev" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i><span class="short"> prev</span><span class="long">ious post</span></a>
+                        <a class="prev" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i>上一篇</a>
                         {% endif %}
                         {% if page.next.url %}
-                        <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">next </span><span class="long">post </span><i class="fa fa-angle-right"></i></a>
+                        <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}">下一篇<i class="fa fa-angle-right"></i></a>
                         {% endif %}
                     </div>
                 </div>
