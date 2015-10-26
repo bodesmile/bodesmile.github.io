@@ -1,4 +1,8 @@
 cd /Users/Bode/Documents/MyBlog@Github/source
+echo "更新代码"
+git add .
+git commit -m "更新source"
+git push origin source
 echo "准备发布"
 jekyll build
 cd /Users/Bode/Documents/MyBlog@Github/blog
