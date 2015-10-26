@@ -1821,31 +1821,41 @@ code {
 	padding:0 3px;
 }
 .icon {
-	fill:#505879;
+/*	fill:#505879;
 	fill-rule:nonzero;
 	stroke:#9BA4B5;
 	stroke-width:0.05;
 	stroke-miterlimit:4;
 	stroke-opacity:0.94117647;
 	stroke-dasharray:none;
-	transition:0.3s all ease;
+	transition:0.3s all ease;*/
+	background: url(../img/bode.jpg) center no-repeat;
+
+	width: 120px;
+	height: 120px;
+	background-size: 120px 120px;
+	border-radius: 60px;
+	border-width: 1px;
+	border-color: #4A4240;
+	border-style: solid
 }
 .twister {
-	font-size:20px;
+	font-size:5.5em;
 	font-weight:300;
-	line-height:125%;
+	line-height:1%;
 	fill:#4A4240;
 	font-family:"BrushScriptMT","ComicSansMS","Arial",sans-serif;
 	/*text-transform:uppercase;*/
 	transition:0.3s all ease;
 }
 .slogan {
-	font-size:7px;
-	font-weight:200;
+	font-size:1em;
+	font-weight:500;
 	line-height:125%;
 	fill:#75535F;
 	font-family:"PingFang SC","STHeitiSC-Light","Arial",sans-serif;
 	transition:0.3s all ease;
+	padding-left: 120px
 }
 a:hover svg .icon,a:hover svg footer .backtotop:hover,footer a:hover svg .backtotop:hover {
 	fill:#75535F;
@@ -2100,6 +2110,38 @@ body.overflow {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fba827', endColorstr='#ffffff',GradientType=0 );
 	z-index:20;
 }
+
+.ts_icon{
+	text-align: center;
+}
+.ts_icon .icon{
+	width: 120px;
+	height: 120px;
+	/*margin-top: -25%;*/
+	background-size: 120px 120px;
+	border-radius: 60px;
+	margin: auto;
+}
+.ts_no_slogan div{
+	display: inline-block;;
+}
+
+.ts_no_slogan{
+	/*margin-top: -25%;*/
+}
+
+.ts_full div{
+	display: inline-block;;
+}
+
+.ts_full .slogan{
+	display: block;;
+}
+
+.ts_full{
+	margin-top: -5%;
+}
+
 @media screen and (min-width:935px) {
 	.head .ts_no_slogan,.head .ts_icon {
 	display:none;
@@ -2127,10 +2169,10 @@ body.overflow {
 	padding:120px 10px;
 }
 }.head .row .logo {
-	position:relative;
+/*	position:relative;
 	width:100%;
 	height:0;
-	padding:22.761020127% 0 0 0;
+	padding:22.761020127% 0 0 0;*/
 	position:absolute;
 	top:50%;
 	left:50%;
