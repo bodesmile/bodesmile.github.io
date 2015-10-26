@@ -2091,12 +2091,12 @@ body.overflow {
 	left:0px;
 	width:100%;
 	/*background: #fba827;*/
-	background: url(../img/shanghai_skyline.png) bottom, -webkit-linear-gradient(top, #fba827, #fbdc0b);
-    background: url(../img/shanghai_skyline.png) bottom, -moz-linear-gradient(top,  #fba827, #fbdc0b);
-    background: url(../img/shanghai_skyline.png) bottom, -webkit-gradient(linear, left top, left bottom, color-stop(#fba827), color-stop(#fbdc0b));
-    background: url(../img/shanghai_skyline.png) bottom, -o-linear-gradient(top,  #fba827,#fbdc0b);
-    background: url(../img/shanghai_skyline.png) bottom, -ms-linear-gradient(top,  #fba827,#fbdc0b);
-    background: url(../img/shanghai_skyline.png) bottom, linear-gradient(top bottom,  #fba827,#fbdc0b);
+	background: url(../img/shanghai_skyline.png) bottom no-repeat, -webkit-linear-gradient(top, #fba827, #fbdc0b);
+    background: url(../img/shanghai_skyline.png) bottom no-repeat, -moz-linear-gradient(top,  #fba827, #fbdc0b);
+    background: url(../img/shanghai_skyline.png) bottom no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(#fba827), color-stop(#fbdc0b));
+    background: url(../img/shanghai_skyline.png) bottom no-repeat, -o-linear-gradient(top,  #fba827,#fbdc0b);
+    background: url(../img/shanghai_skyline.png) bottom no-repeat, -ms-linear-gradient(top,  #fba827,#fbdc0b);
+    background: url(../img/shanghai_skyline.png) bottom no-repeat, linear-gradient(top bottom,  #fba827,#fbdc0b);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fba827', endColorstr='#ffffff',GradientType=0 );
 	z-index:20;
 }
