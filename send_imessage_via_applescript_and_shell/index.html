@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-<title>iBode - 我是博得 - Ooops! </title>
+<title>iBode - 我是博得 - 用脚本发送iMessage的方法 </title>
 
 <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:500,600' rel='stylesheet' type='text/css'>
@@ -12,7 +12,7 @@
 
     </head>
 
-    <body class="index">
+    <body>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="display:none;">
     <defs>
         <symbol id="twinsister_logo">
@@ -231,8 +231,8 @@
     </defs>
 </svg>
 
-       <header class="head">
-           <div class="row">
+        <header class="head">
+            <div class="row">
     <a href="/" class="logo noline">
         <div class="ts_full">
 	<div class="icon"></div>
@@ -250,7 +250,7 @@
     </a>
 </div>
 
-           <section class="main_menu">
+            <section class="main_menu">
     <div class="content">
         <nav id="menu">
             <a class="toggle_link noline"><i class="fa fa-close fa-lg"></i></a>
@@ -344,113 +344,136 @@
 
         <section class="margin">
             <div class="content">
+                <div class="content_container">
+                    <article>
+                        
+                            
+                                <img class="featimg" src="http://i12.tietuku.com/26a19095eb384b02.jpg" alt="http://i12.tietuku.com/26a19095eb384b02.jpg">
+                            
+                        
+
+                        <h1 class="post_title">
+                            用脚本发送iMessage的方法
+                        </h1>
+                        <div class="meta">
+                            
+  
+
+
+    <span class="author">Posted by
+        
+        
+            <a href="/author/Bode">
                 
-                <h1 class="title">Ooops!</h1>
-                <div class="articles">
-                    <div class="error">
-    <p>出错了！</p>
-    <p>回到首页，再试一次吧！</p>
-</div>
-
-
-    <article>
-    
+                    Bode
+                
+            </a>
         
-            
-                <a href="/send_imessage_via_applescript_and_shell/" class="noline">
-                    <img src="http://i12.tietuku.com/26a19095eb384b02.jpg" alt="http://i12.tietuku.com/26a19095eb384b02.jpg">
-                </a>
-            
-        
-    
-    
-        <span class="category">
-            程序猿
-        </span>
-    
-    <a href="/send_imessage_via_applescript_and_shell/">
-        <h1>用脚本发送iMessage的方法</h1>
-    </a>
-    <p class="post_content">最近在使用脚本自动编译上传App到iTunes，到最后一步有个需求，就是需要把上传结果及时通知多个人。一开始想使用Mail。但是又感觉用Mail有点太重了。所以打算用一个轻量级的解决方案——将上传结果，通过iMessage，直接发送到手机上。
+    </span>
 
-发送iMessage需要使用Apple Script。
+ &bull;
+                            <span class="date">
+                                Published on November 05, 2015
+                            </span>
+                        </div>
+                        
+                        <div class="post_content">
+                            <p>最近在使用脚本自动编译上传App到iTunes，到最后一步有个需求，就是需要把上传结果及时通知多个人。一开始想使用Mail。但是又感觉用Mail有点太重了。所以打算用一个轻量级的解决方案——将上传结果，通过iMessage，直接发送到手机上。</p>
 
-</p>
-    <span class="date"><i class="fa fa-calendar"></i> November 05, 2015</span>
-</article>
+<h2 id="imessageapple-script">发送iMessage需要使用Apple Script。</h2>
 
+<!-- more -->
 
-    <article>
-    
-        
-            
-                <a href="/today/" class="noline">
-                    <img src="/img/20150903/IMG_5106.jpg" alt="20150903/IMG_5106.jpg">
-                </a>
-            
-        
-    
-    
-        <span class="category">
-            爱好搞笑
-        </span>
-    
-    <a href="/today/">
-        <h1>胜利日大阅兵！</h1>
-    </a>
-    <p class="post_content">胜利日大阅兵
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Messages&quot;</span>
+  <span class="nb">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="n">to</span> <span class="n">buddy</span> <span class="s2">&quot;foo@helloworld.com&quot;</span> <span class="n">of</span> <span class="p">(</span><span class="n">service</span> <span class="mi">1</span> <span class="n">whose</span> <span class="n">service</span> <span class="n">type</span> <span class="n">is</span> <span class="n">iMessage</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">tell</span></code></pre></div>
 
-</p>
-    <span class="date"><i class="fa fa-calendar"></i> September 03, 2015</span>
-</article>
+<p>或者直接发送到手机号码也没有问题</p>
 
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Messages&quot;</span>
+  <span class="nb">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="n">to</span> <span class="n">buddy</span> <span class="s2">&quot;+8612345678901&quot;</span> <span class="n">of</span> <span class="p">(</span><span class="n">service</span> <span class="mi">1</span> <span class="n">whose</span> <span class="n">service</span> <span class="n">type</span> <span class="n">is</span> <span class="n">iMessage</span><span class="p">)</span>
+<span class="k">end</span> <span class="n">tell</span></code></pre></div>
 
-    <article>
-    
-        
-            
-                <embed src="http://player.youku.com/player.php/sid/XODMyOTAxODIw/v.swf" type="application/x-shockwave-flash" width="100%" height="300" align="middle" allowFullScreen="true" quality="high" ></embed>
-            
-        
-    
-    
-        <span class="category">
-            旅行
-        </span>
-    
-    <a href="/%25e5%258f%25b0%25e6%25b9%25be%25e6%25b8%25b8/">
-        <h1>台湾游</h1>
-    </a>
-    <p class="post_content">2014台湾游
-Taiwan
-&nbsp;
+<p>如果你是个土豪，也可以通过短信方式发送</p>
 
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Messages&quot;</span>
+  <span class="nb">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="n">to</span> <span class="n">buddy</span> <span class="s2">&quot;+8612345678901&quot;</span> <span class="n">of</span> <span class="n">service</span> <span class="s2">&quot;SMS&quot;</span>
+<span class="k">end</span> <span class="n">tell</span></code></pre></div>
 
-</p>
-    <span class="date"><i class="fa fa-calendar"></i> December 08, 2014</span>
-</article>
+<p>OK，然后我们需要在Shell中调用这段Apple Script，所以把内容和发送的对象作为参数传入。最后的脚本就是</p>
 
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">on</span> <span class="n">run</span> <span class="p">{</span><span class="n">receiver</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span>
+	<span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Messages&quot;</span>
+		<span class="nb">send</span> <span class="n">message</span> <span class="n">to</span> <span class="n">buddy</span> <span class="n">receiver</span> <span class="n">of</span> <span class="p">(</span><span class="n">service</span> <span class="mi">1</span> <span class="n">whose</span> <span class="n">service</span> <span class="n">type</span> <span class="n">is</span> <span class="n">iMessage</span><span class="p">)</span>
+	<span class="k">end</span> <span class="n">tell</span>
+<span class="k">end</span> <span class="n">run</span></code></pre></div>
 
-    <article>
-    
-        
-            
-                <a href="/%25e6%2588%2591%25e7%25bb%2598%25e6%2589%2593%25e9%25a3%259e%25e6%259c%25ba-2/" class="noline">
-                    <img src="/img/../assets/8202168.png" alt="../assets/8202168.png">
-                </a>
-            
-        
-    
-    
-    <a href="/%25e6%2588%2591%25e7%25bb%2598%25e6%2589%2593%25e9%25a3%259e%25e6%259c%25ba-2/">
-        <h1>我绘打飞机</h1>
-    </a>
-    <p class="post_content">即将到来，敬请期待！ 有没有过在纸上涂鸦？ 一架战机、一艘战舰、一个无所不能的超人…… 神游的思想，赋予了这些涂鸦一次次的新生。 铅笔划过一个个被击败的敌手，脑补着激烈战争的场面！ 这可能是午后昏昏欲睡的课堂上， 也会是无聊公车上的思维发散。 有人说这是年少时才有幼稚， 但这里，让梦想成真！！！ 不需要脑补了！ 徒手来绘出你心中的一切， 这里会赋予它生命。 你驾驭着你设计的梦想号， 去征服， 去探险，...</p>
-    <span class="date"><i class="fa fa-calendar"></i> May 05, 2014</span>
-</article>
+<p>将Apple Script保存为类似sendMessage.scpt</p>
 
+<p><img src="http://i12.tietuku.com/5309c6b703f03868.png" alt="iMessage" /></p>
 
+<h2 id="shellapple-script">在Shell中调用Apple Script</h2>
+<p>然后在Shell脚本中，用这样的方法来调用：</p>
 
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">osascript</span> <span class="n">sendMessage</span><span class="o">.</span><span class="n">scpt</span> <span class="s2">&quot;+8612345678901&quot;</span> <span class="s2">&quot;iMessage的内容&quot;</span></code></pre></div>
+
+<p>好了，全部搞定！</p>
+
+<h2 id="section">参考</h2>
+<ol>
+  <li><a href="http://www.tenshu.net/search/label/applescript" title="Title">Sending iMessages and SMS through Messages.app with AppleScript</a></li>
+  <li><a href="http://www.giser.net/?p=782" title="Title">在命令行中调用接收参数的AppleScript</a></li>
+</ol>
+
+                        </div>
+                        
+                        <div class="catsandtags">
+                            
+                            <p class="category">
+                                <span class="name">Categories:</span>
+                                <a class='category' href='/category/程序猿/'>程序猿</a>
+                            </p>
+                            
+                            
+                            <p class="tags">
+                                <span class="name">Tags:</span>
+                                
+                            </p>
+                            
+                        </div>
+                        
+
+                        <div class="ds-share flat" data-thread-key=/send_imessage_via_applescript_and_shell data-title=用脚本发送iMessage的方法 data-images="/img/http://i12.tietuku.com/26a19095eb384b02.jpg" data-content="" data-url="site.baseurl//send_imessage_via_applescript_and_shell/">
+                            <div class="ds-share-aside-right">
+                              <div class="ds-share-aside-inner">
+                              </div>
+                              <div class="ds-share-aside-toggle" style="background: #fba827;">分享到</div>
+                            </div>
+                        </div>
+
+                        <!-- 多说评论框 start -->
+                            <div class="ds-thread" data-thread-key=/send_imessage_via_applescript_and_shell data-title=用脚本发送iMessage的方法 data-url="site.baseurl//send_imessage_via_applescript_and_shell/"></div>
+                        <!-- 多说评论框 end -->
+                        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                        <script type="text/javascript">
+                        var duoshuoQuery = {short_name:"bodesmile"};
+                            (function() {
+                                var ds = document.createElement('script');
+                                ds.type = 'text/javascript';ds.async = true;
+                                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                                ds.charset = 'UTF-8';
+                                (document.getElementsByTagName('head')[0] 
+                                 || document.getElementsByTagName('body')[0]).appendChild(ds);
+                            })();
+                            </script>
+                        <!-- 多说公共JS代码 end -->
+                    </article>
+                    <div class="post_nav">
+                        
+                        <a class="prev" href="/today/"><i class="fa fa-angle-left"></i>上一篇</a>
+                        
+                        
+                    </div>
                 </div>
                 <div class="sidebar">
     <div class="widget">
@@ -512,7 +535,6 @@ Taiwan
     </div> -->
 </div>
 
-                <p class="switch">切换布局: <span id="grid">网格</span> &bull; <span id="classic">经典</span></p>
             </div>
         </section>
         <footer>

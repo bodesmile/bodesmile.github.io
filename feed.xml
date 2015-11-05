@@ -7,6 +7,21 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>用脚本发送iMessage的方法</title>
+				
+				
+					<description>&lt;p&gt;最近在使用脚本自动编译上传App到iTunes，到最后一步有个需求，就是需要把上传结果及时通知多个人。一开始想使用Mail。但是又感觉用Mail有点太重了。所以打算用一个轻量级的解决方案——将上传结果，通过iMessage，直接发送到手机上。&lt;/p&gt;
+
+&lt;h2 id=&quot;imessageapple-script&quot;&gt;发送iMessage需要使用Apple Script。&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Thu, 05 Nov 2015 00:00:00 +0800</pubDate>
+				<link>/send_imessage_via_applescript_and_shell/</link>
+				<guid isPermaLink="true">/send_imessage_via_applescript_and_shell/</guid>
+			</item>
+		
+			<item>
 				<title>胜利日大阅兵！</title>
 				
 				
@@ -26,7 +41,6 @@
 					<description>&lt;p&gt;2014台湾游&lt;br /&gt;
 Taiwan&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;embed src=&quot;http://player.youku.com/player.php/sid/XODMyOTAxODIw/v.swf&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;100%&quot; height=&quot;600&quot; align=&quot;middle&quot;&gt;&lt;/embed&gt;&lt;/p&gt;
 
 
 </description>
@@ -298,7 +312,9 @@ Taiwan&lt;/p&gt;
 				<title>iRover！</title>
 				
 				
-					<description>&lt;p&gt;教程在此：&lt;a title=&quot;&quot; href=&quot;http://www.bodesmile.com/1/post/2012/12/iphone.html&quot;&gt;iPhone变身卖萌遥控小车&lt;/a&gt;优酷视频连接：&lt;a href=&quot;http://www.bodesmile.com/1/post/2012/09/irover.html&quot;&gt;iRover MV&lt;/a&gt;&lt;/p&gt;
+					<description>&lt;p&gt;教程在此：&lt;a title=&quot;&quot; href=&quot;http://www.bodesmile.com/1/post/2012/12/iphone.html&quot;&gt;iPhone变身卖萌遥控小车&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;优酷视频连接：&lt;a href=&quot;http://www.bodesmile.com/1/post/2012/09/irover.html&quot;&gt;iRover MV&lt;/a&gt;&lt;/p&gt;
 
 </description>
 				
@@ -932,6 +948,29 @@ Taiwan&lt;/p&gt;
 				
 				
 					<description>&lt;p&gt;更多靓照来啦&lt;/p&gt;
+
+&lt;div class=&quot;gallery&quot;&gt;
+    
+        
+            
+            &lt;b&gt;宣传画1&lt;/b&gt;
+            &lt;img src=&quot;/img/irover/irover1.jpg&quot; alt=&quot;宣传画1&quot; /&gt;
+
+            &lt;b&gt;宣传画2&lt;/b&gt;
+            &lt;img src=&quot;/img/irover/irover2.jpg&quot; alt=&quot;宣传画2&quot; /&gt;
+
+            &lt;b&gt;宣传画3&lt;/b&gt;
+            &lt;img src=&quot;/img/irover/irover3.jpg&quot; alt=&quot;宣传画3&quot; /&gt;
+
+            &lt;b&gt;宣传画4&lt;/b&gt;
+            &lt;img src=&quot;/img/irover/irover4.jpg&quot; alt=&quot;宣传画4&quot; /&gt;
+
+            &lt;b&gt;遥控器实拍&lt;/b&gt;
+            &lt;img src=&quot;/img/irover/020.jpg&quot; alt=&quot;遥控器实拍&quot; /&gt;
+
+
+
+&lt;/div&gt;
 
 </description>
 				
