@@ -19,6 +19,7 @@ facebook: "#"
 youtube: "#"
 vimeo: "#"
 soundcloud: "#"
+excerpt_separator: "<!-- more -->"
 
 encoding: utf-8
 defaults:
@@ -78,6 +79,8 @@ prose:
               value: "standard"
             - name: "Image"
               value: "image"
+            - name: "WebImage"
+              value: "webimage"
             - name: "Gallery"
               value: "gallery"
             - name: "Audio"
@@ -86,6 +89,8 @@ prose:
               value: "youtube"
             - name: "Vimeo"
               value: "vimeo"
+            - name: "Youku"
+              value: "youku"
       - name: "homedisplay"
         field:
           element: "select"
@@ -116,4 +121,10 @@ prose:
           element: "text"
           label: "YouTube Video ID"
           help: "Set post type to youtube in order for this to work. Do not set featured image, as the youtube video thumbnail will be used"
+          type: "text"
+      - name: "yk-video-id"
+        field:
+          element: "text"
+          label: "Youku Video ID"
+          help: "Set post type to youtube in order for this to work. Do not set featured image, as the youku video thumbnail will be used"
           type: "text"
