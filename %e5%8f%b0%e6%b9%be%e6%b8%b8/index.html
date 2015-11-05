@@ -348,7 +348,16 @@
                     <article>
                         
                             
-                                <embed src="http://player.youku.com/player.php/sid/XODMyOTAxODIw/v.swf" type="application/x-shockwave-flash" width="100%" height="600" align="middle" allowFullScreen="true" quality="high" ></embed>
+                                <div id="youkuplayer" style="width:100%;height:500px"></div>
+                                <script type="text/javascript" src="http://player.youku.com/jsapi">
+                                player = new YKU.Player('youkuplayer',{
+                                styleid: '1',
+                                client_id: '8f66408e147b527a',
+                                vid: 'XODMyOTAxODIw',
+                                show_related: false,
+                                autoplay: false
+                                });
+                                </script>
                             
                         
 
@@ -381,6 +390,8 @@
                             <p>2014台湾游<br />
 Taiwan</p>
 <p>&nbsp;</p>
+
+<a title="台湾游" target="video" href="http://v.youku.com/v_show/id_XODMyOTAxODIw.html?from=y1.7-1.2"></a>
 
                         </div>
                         

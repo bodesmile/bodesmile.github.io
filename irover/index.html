@@ -348,7 +348,16 @@
                     <article>
                         
                             
-                                <embed src="http://player.youku.com/player.php/sid/XNDQ2MDkzOTc2/v.swf" type="application/x-shockwave-flash" width="100%" height="600" align="middle" allowFullScreen="true" quality="high" ></embed>
+                                <div id="youkuplayer" style="width:100%;height:500px"></div>
+                                <script type="text/javascript" src="http://player.youku.com/jsapi">
+                                player = new YKU.Player('youkuplayer',{
+                                styleid: '1',
+                                client_id: '8f66408e147b527a',
+                                vid: 'XNDQ2MDkzOTc2',
+                                show_related: false,
+                                autoplay: false
+                                });
+                                </script>
                             
                         
 
