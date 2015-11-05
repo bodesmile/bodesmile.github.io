@@ -11,6 +11,7 @@ cd /Users/Bode/Documents/MyBlog@Github/blog
 rm -r ./*
 cp -r /Users/Bode/Documents/MyBlog@Github/source/_site/* ./
 cp /Users/Bode/Documents/MyBlog@Github/source/.gitignore ./
+cp /Users/Bode/Documents/MyBlog@Github/source/CNAME ./
 git add .
 git commit -m ${NOTE}
 echo "正在上传"
