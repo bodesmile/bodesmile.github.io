@@ -29,7 +29,16 @@
                             {% endif %}
                         {% elsif page.type == "youku" %}
                             {% if page.yk-video-id %}
-                                <embed src="http://player.youku.com/player.php/sid/{{page.yk-video-id}}/v.swf" type="application/x-shockwave-flash" width="100%" height="600" align="middle" allowFullScreen="true" quality="high" ></embed>
+                                <div id="youkuplayer" style="width:100%;height:500px"></div>
+                                <script type="text/javascript" src="http://player.youku.com/jsapi">
+                                player = new YKU.Player('youkuplayer',{
+                                styleid: '1',
+                                client_id: '8f66408e147b527a',
+                                vid: '{{page.yk-video-id}}',
+                                show_related: false,
+                                autoplay: false
+                                });
+                                </script>
                             {% endif %}
                         {% elsif page.type == "image" or page.type == "gallery" %}
                             {% if page.featimg %}
