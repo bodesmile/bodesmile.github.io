@@ -7,6 +7,23 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>试了试定格动画</title>
+				
+				
+					<description>&lt;p&gt;用了个定格动画的app，连续拍了70张照片合成出来的。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i13.tietuku.com/db2486ce050eaa43.png&quot; alt=&quot;定格动画&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;iPhone固定在转椅的椅背上，但是转动的时候可以看出略抖了~下次要改良下~~&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sat, 07 Nov 2015 00:00:00 +0800</pubDate>
+				<link>/stop_motion/</link>
+				<guid isPermaLink="true">/stop_motion/</guid>
+			</item>
+		
+			<item>
 				<title>用脚本发送iMessage的方法</title>
 				
 				
