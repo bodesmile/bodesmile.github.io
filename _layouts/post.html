@@ -29,7 +29,7 @@
                             {% endif %}
                         {% elsif page.type == "youku" %}
                             {% if page.yk-video-id %}
-                                <div id="youkuplayer" style="width:100%;height:500px"></div>
+                                <div id="youkuplayer" style="width:100%;height:0;padding-bottom: 66%;"></div>
                                 <script type="text/javascript" src="http://player.youku.com/jsapi">
                                 player = new YKU.Player('youkuplayer',{
                                 styleid: '1',
@@ -90,7 +90,7 @@
                         </div>
                         {% endif %}
 
-                        <div class="ds-share flat" data-thread-key={{ page.id }} data-title={{ page.title }} data-images="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg }}" data-content="{{ post.excerpt | strip_html | truncatewords: 15 }}" data-url="site.baseurl/{{ page.url }}">
+                        <div class="ds-share flat" data-thread-key={{ page.id }} data-title={{ page.title }} data-images="{{ site.media_folder | prepend: site.url | replace: '//', '/'}}/{{ page.featimg }}" data-content="{{ post.excerpt | strip_html | truncatewords: 15 }}" data-url="{{ site.url }}{{ page.url }}">
                             <div class="ds-share-aside-right">
                               <div class="ds-share-aside-inner">
                               </div>
@@ -99,7 +99,7 @@
                         </div>
 
                         <!-- 多说评论框 start -->
-                            <div class="ds-thread" data-thread-key={{ page.id }} data-title={{ page.title }} data-url="site.baseurl/{{ page.url }}"></div>
+                            <div class="ds-thread" data-thread-key={{ page.id }} data-title={{ page.title }} data-url="{{ site.url }}{{ page.url }}"></div>
                         <!-- 多说评论框 end -->
                         <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
                         <script type="text/javascript">

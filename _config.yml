@@ -1,7 +1,7 @@
 name: iBode - 我是博得
 description: 博得的个人主页 Bode's Homepage
 url: http://www.bodesmile.com
-baseurl: http://www.bodesmile.com
+baseurl: #place folder name if site is served in subfolder
 permalink: /:title/
 paginate: 12
 paginate_path: /page/:num/
