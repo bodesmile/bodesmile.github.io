@@ -384,29 +384,29 @@
 
 <!-- more -->
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Messages&quot;</span>
-  <span class="nb">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="n">to</span> <span class="n">buddy</span> <span class="s2">&quot;foo@helloworld.com&quot;</span> <span class="n">of</span> <span class="p">(</span><span class="n">service</span> <span class="mi">1</span> <span class="n">whose</span> <span class="n">service</span> <span class="n">type</span> <span class="n">is</span> <span class="n">iMessage</span><span class="p">)</span>
-<span class="k">end</span> <span class="n">tell</span></code></pre></div>
+<div class="highlight"><pre><code class="language-applescript" data-lang="applescript"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Messages&quot;</span>
+  <span class="nv">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="k">to</span> <span class="nv">buddy</span> <span class="s2">&quot;foo@helloworld.com&quot;</span> <span class="k">of</span> <span class="p">(</span><span class="nv">service</span> <span class="mi">1</span> <span class="nb">whose</span> <span class="nv">service</span> <span class="nv">type</span> <span class="ow">is</span> <span class="nv">iMessage</span><span class="p">)</span>
+<span class="k">end</span> <span class="k">tell</span></code></pre></div>
 
 <p>或者直接发送到手机号码也没有问题</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Messages&quot;</span>
-  <span class="nb">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="n">to</span> <span class="n">buddy</span> <span class="s2">&quot;+8612345678901&quot;</span> <span class="n">of</span> <span class="p">(</span><span class="n">service</span> <span class="mi">1</span> <span class="n">whose</span> <span class="n">service</span> <span class="n">type</span> <span class="n">is</span> <span class="n">iMessage</span><span class="p">)</span>
-<span class="k">end</span> <span class="n">tell</span></code></pre></div>
+<div class="highlight"><pre><code class="language-applescript" data-lang="applescript"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Messages&quot;</span>
+  <span class="nv">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="k">to</span> <span class="nv">buddy</span> <span class="s2">&quot;+8612345678901&quot;</span> <span class="k">of</span> <span class="p">(</span><span class="nv">service</span> <span class="mi">1</span> <span class="nb">whose</span> <span class="nv">service</span> <span class="nv">type</span> <span class="ow">is</span> <span class="nv">iMessage</span><span class="p">)</span>
+<span class="k">end</span> <span class="k">tell</span></code></pre></div>
 
 <p>如果你是个土豪，也可以通过短信方式发送</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Messages&quot;</span>
-  <span class="nb">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="n">to</span> <span class="n">buddy</span> <span class="s2">&quot;+8612345678901&quot;</span> <span class="n">of</span> <span class="n">service</span> <span class="s2">&quot;SMS&quot;</span>
-<span class="k">end</span> <span class="n">tell</span></code></pre></div>
+<div class="highlight"><pre><code class="language-applescript" data-lang="applescript"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Messages&quot;</span>
+  <span class="nv">send</span> <span class="s2">&quot;iMessage的内容&quot;</span> <span class="k">to</span> <span class="nv">buddy</span> <span class="s2">&quot;+8612345678901&quot;</span> <span class="k">of</span> <span class="nv">service</span> <span class="s2">&quot;SMS&quot;</span>
+<span class="k">end</span> <span class="k">tell</span></code></pre></div>
 
 <p>OK，然后我们需要在Shell中调用这段Apple Script，所以把内容和发送的对象作为参数传入。最后的脚本就是</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">on</span> <span class="n">run</span> <span class="p">{</span><span class="n">receiver</span><span class="p">,</span> <span class="n">message</span><span class="p">}</span>
-	<span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Messages&quot;</span>
-		<span class="nb">send</span> <span class="n">message</span> <span class="n">to</span> <span class="n">buddy</span> <span class="n">receiver</span> <span class="n">of</span> <span class="p">(</span><span class="n">service</span> <span class="mi">1</span> <span class="n">whose</span> <span class="n">service</span> <span class="n">type</span> <span class="n">is</span> <span class="n">iMessage</span><span class="p">)</span>
-	<span class="k">end</span> <span class="n">tell</span>
-<span class="k">end</span> <span class="n">run</span></code></pre></div>
+<div class="highlight"><pre><code class="language-applescript" data-lang="applescript"><span class="k">on</span> <span class="nb">run</span> <span class="p">{</span><span class="nv">receiver</span><span class="p">,</span> <span class="nv">message</span><span class="p">}</span>
+	<span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Messages&quot;</span>
+		<span class="nv">send</span> <span class="nv">message</span> <span class="k">to</span> <span class="nv">buddy</span> <span class="nv">receiver</span> <span class="k">of</span> <span class="p">(</span><span class="nv">service</span> <span class="mi">1</span> <span class="nb">whose</span> <span class="nv">service</span> <span class="nv">type</span> <span class="ow">is</span> <span class="nv">iMessage</span><span class="p">)</span>
+	<span class="k">end</span> <span class="k">tell</span>
+<span class="k">end</span> <span class="nb">run</span></code></pre></div>
 
 <p>将Apple Script保存为类似sendMessage.scpt</p>
 
@@ -415,7 +415,7 @@
 <h2 id="shellapple-script">在Shell中调用Apple Script</h2>
 <p>然后在Shell脚本中，用这样的方法来调用：</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">osascript</span> <span class="n">sendMessage</span><span class="o">.</span><span class="n">scpt</span> <span class="s2">&quot;+8612345678901&quot;</span> <span class="s2">&quot;iMessage的内容&quot;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>osascript sendMessage.scpt <span class="s2">&quot;+8612345678901&quot;</span> <span class="s2">&quot;iMessage的内容&quot;</span></code></pre></div>
 
 <p>好了，全部搞定！</p>
 
