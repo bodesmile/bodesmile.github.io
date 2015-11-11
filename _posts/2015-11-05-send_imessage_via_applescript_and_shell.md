@@ -15,14 +15,14 @@ category:
 
 <!-- more -->
 
-{% highlight ruby %}
+{% highlight applescript %}
 tell application "Messages"
   send "iMessage的内容" to buddy "foo@helloworld.com" of (service 1 whose service type is iMessage)
 end tell
 {% endhighlight %}
   
 或者直接发送到手机号码也没有问题
-{% highlight ruby %}
+{% highlight applescript %}
 tell application "Messages"
   send "iMessage的内容" to buddy "+8612345678901" of (service 1 whose service type is iMessage)
 end tell
@@ -32,7 +32,7 @@ end tell
 	
   
 如果你是个土豪，也可以通过短信方式发送
-{% highlight ruby %}
+{% highlight applescript %}
 tell application "Messages"
   send "iMessage的内容" to buddy "+8612345678901" of service "SMS"
 end tell
@@ -42,7 +42,7 @@ end tell
   	
 	
 OK，然后我们需要在Shell中调用这段Apple Script，所以把内容和发送的对象作为参数传入。最后的脚本就是
-{% highlight ruby %}
+{% highlight applescript %}
 on run {receiver, message}
 	tell application "Messages"
 		send message to buddy receiver of (service 1 whose service type is iMessage)
@@ -60,7 +60,7 @@ end run
 在Shell中调用Apple Script
 ---
 然后在Shell脚本中，用这样的方法来调用：
-{% highlight ruby %}
+{% highlight bash %}
 $ osascript sendMessage.scpt "+8612345678901" "iMessage的内容"
 {% endhighlight %} 
 
